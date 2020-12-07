@@ -1,0 +1,56 @@
+body{
+    background-color: #1b1e21;
+    color: white;
+    font-family: "Century Gothic";
+    margin: 0 !important;
+}
+/*Header #########################################################################################################*/
+header{
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+/*Main menu #########################################################################################################*/
+nav{
+    background-color: #0a0d10;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    height: 50px;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 18px;
+    height: 35px;
+    line-height: 200%;
+    display: inline-block;
+}
+
+ul a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+ul > li{
+    float: left;
+    width: 150px;
+    height: 40px;
+}
+
+ul > li:hover{
+    background-color: #1b1e21;
+}
+
