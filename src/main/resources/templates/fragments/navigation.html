@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header th:fragment="navigation">
+    <h1 class="m-0 py-4 px-0 text-nowrap text-center">{ So let's code! };</h1>
+    <nav class="navbar navbar-light bg-light navbar-expand-md">
+        <button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#mainmenu"
+                aria-controls="mainmenu" aria-expanded="false" aria-label="Switch navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="mainmenu">
+            <ul class="navbar-nav">
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-dark" th:href="@{/}">HOME</a>
+                </li>
+                <li class="nav-item mx-3 dropdown">
+                    <a class="nav-link text-dark dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"
+                       id="submenu" aria-haspopup="true">Java</a>
+
+                    <div class="dropdown-menu" aria-labelledby="submenu">
+                        <a class="dropdown-item text-dark" th:href="@{/j-basics}">Podstawy</a>
+                        <a class="dropdown-item text-dark" href="#">OOP</a>
+                    </div>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-dark" href="#">Spring</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-dark" href="#">Bootstrap</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-dark" href="#">HTML</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-dark" href="#">CSS</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-dark text-nowrap" href="#">O autorze</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+</body>
+</html>
