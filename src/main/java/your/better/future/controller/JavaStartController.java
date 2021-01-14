@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/j-basics/java-start")
+@RequestMapping("/java-start")
 public class JavaStartController {
 
     @GetMapping
