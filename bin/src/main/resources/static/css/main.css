@@ -3,11 +3,12 @@ html, body{
     height: 100%;
     background-color: #1b1e21 !important;
     font-family: "Century Gothic";
-    color: black !important;
 }
-
-li > a{
-	color: black !important;
+/*Header #########################################################################################################*/
+h1{
+    letter-spacing: 3px;
+    font-size: 3rem !important;
+    color: white !important;
 }
 
 /*Footer #########################################################################################################*/
@@ -64,10 +65,5 @@ li > a{
 
 a.tlink{
     text-decoration: none;
-    color: #555555!important;
-}
-
-a.tlink:hover{
-    color: #1f1f1f!important;
 }
 
