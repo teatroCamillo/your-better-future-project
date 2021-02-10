@@ -37,6 +37,7 @@ p{
 
 .fb{
     min-height: 3rem;
+   	transition: background-color .5s ease-in-out;
 }
 
 .fb:hover{
@@ -45,6 +46,7 @@ p{
 
 .inst{
     min-height: 3rem;
+    transition: background-color .5s ease-in-out;
 }
 
 .inst:hover{
@@ -53,6 +55,7 @@ p{
 
 .tw{
     min-height: 3rem;
+    transition: background-color .5s ease-in-out;
 }
 
 .tw:hover{
@@ -61,6 +64,7 @@ p{
 
 .in{
     min-height: 3rem;
+    transition: background-color .5s ease-in-out;
 }
 
 .in:hover{
@@ -69,6 +73,7 @@ p{
 
 .gh{
     min-height: 3rem;
+    transition: background-color .5s ease-in-out;
 }
 .gh:hover {
     background-color: #0004ff;
@@ -76,18 +81,20 @@ p{
 
 .gm{
     min-height: 3rem;
+    transition: background-color .5s ease-in-out;
 }
 
 .gm:hover{
-    background-color: #bb001b;
+    background-color: #ff0000;
 }
 
 a.tlink{
     text-decoration: none;
     color: #555555!important;
+    transition: color .5s ease-in-out;
 }
 
 a.tlink:hover{
-    color: #1f1f1f!important;
+    color: #fff !important;
 }
 
