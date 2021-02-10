@@ -13,4 +13,10 @@ public class JBasicsController {
     String getJBasics(){
         return "j-basics";
     }
+    
+    @GetMapping("/first-program")
+    String getFirstProgram(){
+        return "j-basics-d/first-program";
+    }
+    
 }
