@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Java - Start</title>
+
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+    <link th:href="@{/css/java-start.css}" rel="stylesheet">
+    <link th:href="@{/css/fontello.css}" rel="stylesheet">
+    <link th:href="@{/css/bootstrap/bootstrap.css}" rel="stylesheet">
+
+</head>
+<body class="d-flex flex-column">
+<div th:replace="~{fragments/navigation :: navigation}"></div>
+
+<div class="container my-0">
+    <div class="row w-100 mx-0 px-0 justify-content-center">
+
+        <main class="col-md-8 my-4 mx-3 px-4 py-3 bg-light">
+            <div>
+				<h2>Instalacja</h2>
+				<p>W tym wpisie zajmiemy się instalacja wszystkich niezbędnych narzędzi do tworzenia własnych programów. Dodatkowo wyjaśnimy kilka kwestii związanych z nimi. </p>
+				<p>Instalacja zostanie przeprowadzona w systemie Windows 10. Natomiast co do innych systemów instrukcje zostaną wkrótce dodane.</p>
+
+				<h4>Tak więc co nam będzie potrzebne?</h4>
+				<p>W zasadzie potrzebujemy 2 elementów. Pierwszy to oczywiście sama Java a dokładnie JDK (ang. Java Development Kid). Jest to nic innego jak środowisko deweloperskie Javy, które zawiera wszystkie narzędzia i biblioteki niezbędne do tworzenia aplikacji w Java. Dodatkowo pozwala nam uruchamiać nasze programy, monitorować je, debugować itp.</p>
+				
+				<p>JDK zawiera w sobie tak ważne komponenty, jak JRE, JVM, JIT, biblioteki, polecenia powłoki/konsolowe oraz wiele więcej. Ich dokładnym wyjaśnieniem zajmiemy się w innych wpisach.</p>
+				
+				<p>Drugim elementem jest tzw. IDE (ang. Integrated Development Environment), czyli zintegrowane środowisko programistyczne. A najprościej pisząc, jest to program dedykowany do tworzenia i uruchamiania programów z wieloma dodatkowymi narzędziami, które umożliwiają nam szybszą i wydajniejszą pracę z kodem.
+</p>
+
+				<h4>Wybór IDE</h4>
+				<p>Zaczniemy od wyboru i instalacji środowiska programistycznego.</p> 
+				<p>Jest wiele IDE, z których można skorzystać. Dla przykładu są to:</p>
+				<ul>
+					<li>Eclipse</li>
+					<li>IntelliJ IDEA</li>
+					<li>NetBeans</li>
+					<li>BlueJ</li>
+					<li>Oracle JDeveloper</li>
+					<li>DrJava</li>
+				</ul>
+
+				<p>To jedynie kilka przykładowych środowisko. Przyznam się, że nie korzystałem ze wszystkich, wiec niewiele mogę o nich napisać.
+Natomiast pierwsze trzy znam. Miałem przyjemność z nimi pracować i mogę je bez problemu polecić.</p>
+				<p>Dodatkowo są one często wybierane w firmach i są darmowe. No poza IntelliJ, który jest częściowo darmowy. Co do pozostałych zostawiam Tobie ich przetestowanie i podjęcie własnej decyzji. Ja jednak muszę podjąć własną męską decyzję i któreś IDE wybrać.</p>
+
+				<p>Nie mam z tym problemu, najlepszą opcja według mnie jest IntelliJ IDEA.</p>
+				
+				<p>Dlaczego?</p>
+				
+				<p>Jest naprawdę zaawansowanym środowiskiem, posiada mnóstwo ułatwiających życie narzędzi, których nie spotkałem w innych środowiskach, posiada odpowiadający mi theme, który koloruje mi składnie i jest przyjazny dla oka a samo środowisko działa naprawdę płynnie. Co prawda mnogość opcji może na początku przytłoczyć, ale zapewniam Cię, że tylko na początku a taka konfrontacja potrafi zaprocentować przy późniejszym korzystaniu z innych narzędzi.</p>
+				
+				<p>Czy nie wspominałeś że IntelliJ jest płatny?</p>
+
+				<p>Tylko częściowo. Ogólnie jest tak, że istnieją dwie edycje <strong>IntelliJ IDEA Community Edition</strong> oraz <strong>IntelliJ IDEA Ultimate</strong>. Edycja IntelliJ IDEA Community Edition jest darmowa i właśnie ją wybierzemy. Przy wyborze tej drugiej musimy opłacić subskrypcję. Natomiast jest oczywiście wersja trial 30-dniowa, z której zachęcam skorzystać, ale polecam to dopiero po nabraniu płynności w Java i na początku tworzenia bardziej zaawansowanych aplikacji przy zastosowaniu frameworków.</p>
+
+				<h4>Instalacja IntelliJ IDEA Community Edition</h4>
+				<p>Aby zainstalować IntelliJ musimy go najpierw pobrać. W tym celu przechodzimy na stronę <a href="https://www.jetbrains.com/">www.jetbrains.com</a>. Następnie klikamy zakładkę <code>Developer Tools</code> u góry strony i wybieramy <code>IntelliJ IDEA</code>, a potem <code>Download</code> na środku strony. Przenosi nas na główną stronę do pobrania IDE. Jak widać mamy dwie edycje do wyboru. Oczywiście pobieramy edycje Community.</p>
+				
+				<p>Po kliknięciu rozpoczyna się pobieranie. A po chwili mamy plik .exe na swojej lokalnej maszynie w folderze Pobrane. Przy założeniu, że nie zmieniłeś/aś pliku na plik .zip i masz domyślne ustawienia przeglądarki odnośnie lokalizacji pobranych plików z sieci.</p>
+				
+				<p>Ok, teraz uruchamiamy pobrany plik, wybieramy lokalizacje do zainstalowania środowiska. Ja zostawiam ścieżkę domyślną i klikam <code>Next</code>.
+W następnym oknie mamy kilka checkboxów. Proponuję na zaznaczenie 64-bit skrótu na pulpicie oraz <strong>Add launchers dir to the PATH</strong>. Klikamy <code>Next</code>, a następnie <code>Install</code>.
+I po chwili mamy zainstalowane środowisko.</p>
+
+
+				<h4>Instalacja JDK</h4>
+				<p>Teraz czas na JDK. Wchodzimy na stronę <a href="https://www.oracle.com/">www.oracle.com</a>, a następnie wybieramy zakładkę <code>Products</code> i w kategorii <strong>Software</strong> wchodzimy pod <code>Java</code>. Po prawej stornie powinien być przycisk <code>Download Java</code> <strong>[jka na zdjeciu]</strong> – klikamy go. Następnie szukamy <strong>Java SE 8</strong> i klikamy <code>JDK Download</code> <strong>[jak na zdjeciu]</strong>. Teraz z listy wybieramy odpowiedni dla nas system.</p>
+				
+				<p>Tu może pojawić się mała wątpliwość, ponieważ są dwie wersje dla Windows x64 i x86.
+				<p>O co w takim razie chodzi?</p>
+				<p>Nie będę się o tym rozwodzić, ponieważ wpis dotyczy czegoś innego, ale ogólnie chodzi o architekturę procesorów.</p>
+
+				<p>W takim razie, którą architekturę wybrać?</p>
+
+
+				<p>Dla systemów Windows można to sprawdzić w wierszu poleceń cmd, wpisując komendę <code>systeminfo</code>. Wiersz, który dostarcza nam informacji o architekturze to Typ Systemu (ang. System Typ) i taką wersję JDK powinniśmy wybrać.</p>
+				
+				<p>Dla mojej maszyny odpowiednia jest wersja Windows x64 i taką też wybieram.
+				Po kliknięciu mamy do zaakceptowania zgodę korporacji Oracle.</p>
+				
+				<h5>I tutaj mały disclaimer</h5>
+				<p>Do stycznia 2019 r. Java była licencjonowana na podstawie <strong>Oracle Binary Code License Agreement (BCL)</strong>. Ta licencja zapewniała bezpłatne korzystanie z Javy SE.
+Z końcem stycznia 2019 r. Oracle zakończył dostarczanie bezpłatnych aktualizacji Javy SE 8 dla użytkowników komercyjnych. Informacje na ten temat można znaleźć na stronie internetowej Oracle.
+Od tego czasu wszelkie kwestie licencjonowania Javy reguluje <strong>OTN - Oracle Technology Network License Agreement</strong>. Zachęcam do zapoznania się — dokument można znaleźć na stronach Oracle.
+Jednakże z licencji OTN interesuje nas to, że jest nadal wolna do użytku osobistego i do wykorzystania w rozwoju w tym w celach demonstracyjnych.</p>
+
+				<p>Te informacje są bardzo ważne, żeby wiedzieć z czego się korzysta i na jakich warunkach. Dlatego postanowiłem o nich krótko wspomnieć i jak zwykle zachęcam samemu przeczytać powyższą licencję.</p>
+				
+				<h4>Natomiast wracając do głównego tematu</h4>
+				<p>Akceptujemy licencję, zaznaczając wymagane pole i po tym pozostaje nam już tylko rejestracja.
+Po rejestracji musimy zweryfikować e-mail.</p>
+				<p>Następnie logujemy się na nasze konto na stronie Oracle i jeśli JDK nie zacznie pobierać się automatycznie, musimy ponownie odszukać interesującą nas wersję i ponownie kliknąć link do pobrania.</p>
+
+				<h4>Po pobraniu instalujemy JDK</h4>
+				<p>W tym celu uruchamiamy pobrany plik i pozostawiając wszystkie ustawienia domyślnie, klikamy Next, aż proces instalacji się rozpocznie.
+Po zakończeniu instalacji pozostało nam jedynie sprawdzić, czy Java jest poprawnie zainstalowana. Aby to sprawdzić, w linii komend cmd wpisujemy <code>java -version</code>, jeśli masz informacje jak na poniższym zdjęciu, oznacza to, że wszystko jest poprawnie zainstalowane.</p>
+
+				<p>Warto jeszcze na koniec zrestartować komputer, aby wszystkie zmiany zapisały się w systemie prawidłowo jak np. zmienna środowiskowa do IntelliJ. O czym z resztą mieliśmy komunikat po instalacji IDE. Co do zmiennych środowiskowych Javy to program instalacyjny ustawia automatycznie odpowiednią zmienną. Tak więc nie musimy się tym przejmować.</p>
+				
+				<p>No cóż, wygląda na to, że dobrnęliśmy do brzegu.</p>
+				<p>Aby przetestować zainstalowane środowisko, zapraszam Cię do sekcji Podstawy, która to jest naturalną kontynuacją zagadnień związanych z Java.
+Zapraszam!</p>  
+            </div>
+        </main>
+
+       <div th:replace="~{fragments/entries :: entries}"></div>
+
+    </div>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script th:src="@{https://code.jquery.com/jquery-3.5.1.slim.min.js}" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js}" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
