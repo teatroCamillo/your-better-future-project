@@ -22,14 +22,19 @@
 				<h2>Instalacja</h2>
 				<p>W tym wpisie zajmiemy się instalacja wszystkich niezbędnych narzędzi do tworzenia własnych programów. Dodatkowo wyjaśnimy kilka kwestii związanych z nimi. </p>
 				<p>Instalacja zostanie przeprowadzona w systemie Windows 10. Natomiast co do innych systemów instrukcje zostaną wkrótce dodane.</p>
+				<br/><br/>
 
 				<h4>Tak więc co nam będzie potrzebne?</h4>
 				<p>W zasadzie potrzebujemy 2 elementów. Pierwszy to oczywiście sama Java a dokładnie JDK (ang. Java Development Kid). Jest to nic innego jak środowisko deweloperskie Javy, które zawiera wszystkie narzędzia i biblioteki niezbędne do tworzenia aplikacji w Java. Dodatkowo pozwala nam uruchamiać nasze programy, monitorować je, debugować itp.</p>
 				
 				<p>JDK zawiera w sobie tak ważne komponenty, jak JRE, JVM, JIT, biblioteki, polecenia powłoki/konsolowe oraz wiele więcej. Ich dokładnym wyjaśnieniem zajmiemy się w innych wpisach.</p>
 				
-				<p>Drugim elementem jest tzw. IDE (ang. Integrated Development Environment), czyli zintegrowane środowisko programistyczne. A najprościej pisząc, jest to program dedykowany do tworzenia i uruchamiania programów z wieloma dodatkowymi narzędziami, które umożliwiają nam szybszą i wydajniejszą pracę z kodem.
-</p>
+				<div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="JDK Scheme" th:src="@{/images/installation-img/jdk-scheme-edited-wbg2.gif}">
+				</div>
+				
+				<p>Drugim elementem jest tzw. <strong>IDE (ang. Integrated Development Environment)</strong>, czyli zintegrowane środowisko programistyczne. A najprościej pisząc, jest to program dedykowany do tworzenia i uruchamiania programów z wieloma dodatkowymi narzędziami, które umożliwiają nam szybszą i wydajniejszą pracę z kodem.</p>
+				<br/><br/>
 
 				<h4>Wybór IDE</h4>
 				<p>Zaczniemy od wyboru i instalacji środowiska programistycznego.</p> 
@@ -53,9 +58,10 @@ Natomiast pierwsze trzy znam. Miałem przyjemność z nimi pracować i mogę je 
 				
 				<p>Jest naprawdę zaawansowanym środowiskiem, posiada mnóstwo ułatwiających życie narzędzi, których nie spotkałem w innych środowiskach, posiada odpowiadający mi theme, który koloruje mi składnie i jest przyjazny dla oka a samo środowisko działa naprawdę płynnie. Co prawda mnogość opcji może na początku przytłoczyć, ale zapewniam Cię, że tylko na początku a taka konfrontacja potrafi zaprocentować przy późniejszym korzystaniu z innych narzędzi.</p>
 				
-				<p>Czy nie wspominałeś że IntelliJ jest płatny?</p>
+				<p>Czy nie wspominałeś, że IntelliJ jest płatny?</p>
 
 				<p>Tylko częściowo. Ogólnie jest tak, że istnieją dwie edycje <strong>IntelliJ IDEA Community Edition</strong> oraz <strong>IntelliJ IDEA Ultimate</strong>. Edycja IntelliJ IDEA Community Edition jest darmowa i właśnie ją wybierzemy. Przy wyborze tej drugiej musimy opłacić subskrypcję. Natomiast jest oczywiście wersja trial 30-dniowa, z której zachęcam skorzystać, ale polecam to dopiero po nabraniu płynności w Java i na początku tworzenia bardziej zaawansowanych aplikacji przy zastosowaniu frameworków.</p>
+				<br/><br/>
 
 				<h4>Instalacja IntelliJ IDEA Community Edition</h4>
 				<p>Aby zainstalować IntelliJ musimy go najpierw pobrać. W tym celu przechodzimy na stronę <a href="https://www.jetbrains.com/">www.jetbrains.com</a>. Następnie klikamy zakładkę <code>Developer Tools</code> u góry strony i wybieramy <code>IntelliJ IDEA</code>, a potem <code>Download</code> na środku strony. Przenosi nas na główną stronę do pobrania IDE. Jak widać mamy dwie edycje do wyboru. Oczywiście pobieramy edycje Community.</p>
@@ -63,47 +69,127 @@ Natomiast pierwsze trzy znam. Miałem przyjemność z nimi pracować i mogę je 
 				<p>Po kliknięciu rozpoczyna się pobieranie. A po chwili mamy plik .exe na swojej lokalnej maszynie w folderze Pobrane. Przy założeniu, że nie zmieniłeś/aś pliku na plik .zip i masz domyślne ustawienia przeglądarki odnośnie lokalizacji pobranych plików z sieci.</p>
 				
 				<p>Ok, teraz uruchamiamy pobrany plik, wybieramy lokalizacje do zainstalowania środowiska. Ja zostawiam ścieżkę domyślną i klikam <code>Next</code>.
-W następnym oknie mamy kilka checkboxów. Proponuję na zaznaczenie 64-bit skrótu na pulpicie oraz <strong>Add launchers dir to the PATH</strong>. Klikamy <code>Next</code>, a następnie <code>Install</code>.
+W następnym oknie mamy kilka checkboxów. Proponuję na zaznaczenie <strong>64-bit launcher</strong> — utworzy nam skrótu na pulpicie oraz <strong>Add launchers dir to the PATH</strong> — ustawi nam zmienną środowiskową dla IntelliJ'a.</p>
+
+				<div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="IntelliJ instalation wizard" th:src="@{/images/installation-img/ins-ide-64-path.png}">
+				</div>
+				<br/>
+
+				<p>Klikamy <code>Next</code>, a następnie <code>Install</code>.
 I po chwili mamy zainstalowane środowisko.</p>
+				<br/><br/>
 
 
 				<h4>Instalacja JDK</h4>
-				<p>Teraz czas na JDK. Wchodzimy na stronę <a href="https://www.oracle.com/">www.oracle.com</a>, a następnie wybieramy zakładkę <code>Products</code> i w kategorii <strong>Software</strong> wchodzimy pod <code>Java</code>. Po prawej stornie powinien być przycisk <code>Download Java</code> <strong>[jka na zdjeciu]</strong> – klikamy go. Następnie szukamy <strong>Java SE 8</strong> i klikamy <code>JDK Download</code> <strong>[jak na zdjeciu]</strong>. Teraz z listy wybieramy odpowiedni dla nas system.</p>
+				<p>Teraz czas na JDK. Wchodzimy na stronę <a href="https://www.oracle.com/">www.oracle.com</a>, a następnie wybieramy zakładkę <code>Products</code> i w kategorii <strong>Software</strong> wchodzimy pod <code>Java</code>. Po prawej stornie powinien być przycisk <code>Download Java</code>  – klikamy go. Następnie szukamy <strong>Java SE 8</strong> i klikamy <code>JDK Download</code> — jak na poniższej ilustracji.</p>
 				
-				<p>Tu może pojawić się mała wątpliwość, ponieważ są dwie wersje dla Windows x64 i x86.
+				<div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="Orcle JDK 8 download page" th:src="@{/images/installation-img/jdk-down.png}">
+				</div>
+				<br/>
+				
+				<p>Teraz z listy wybieramy odpowiedni dla nas system.</p>
+				
+				<p>Tu może pojawić się mała wątpliwość, ponieważ są dwie wersje dla systemu Windows: x64 i x86.
 				<p>O co w takim razie chodzi?</p>
-				<p>Nie będę się o tym rozwodzić, ponieważ wpis dotyczy czegoś innego, ale ogólnie chodzi o architekturę procesorów.</p>
+				<p>Nie będę się o tym rozwodzić, ponieważ wpis dotyczy instalacji środowiska programistycznego, ale ogólnie chodzi o architekturę procesorów.</p>
+				<br/>
 
-				<p>W takim razie, którą architekturę wybrać?</p>
+				<h5>W takim razie, którą architekturę wybrać?</h5>
 
 
-				<p>Dla systemów Windows można to sprawdzić w wierszu poleceń cmd, wpisując komendę <code>systeminfo</code>. Wiersz, który dostarcza nam informacji o architekturze to Typ Systemu (ang. System Typ) i taką wersję JDK powinniśmy wybrać.</p>
+				<p>Dla systemów Windows można to sprawdzić w wierszu poleceń cmd, wpisując komendę <code>systeminfo</code>. Wiersz, który dostarcza nam informacji o architekturze to <strong>Typ Systemu (eng. System Type)</strong> i taką wersję JDK powinniśmy wybrać.</p>
+				
+				<div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="System Type" th:src="@{/images/installation-img/system-type-edited.png}">
+				</div>
+				<br/>
 				
 				<p>Dla mojej maszyny odpowiednia jest wersja Windows x64 i taką też wybieram.
 				Po kliknięciu mamy do zaakceptowania zgodę korporacji Oracle.</p>
+				<br/>
 				
 				<h5>I tutaj mały disclaimer</h5>
 				<p>Do stycznia 2019 r. Java była licencjonowana na podstawie <strong>Oracle Binary Code License Agreement (BCL)</strong>. Ta licencja zapewniała bezpłatne korzystanie z Javy SE.
-Z końcem stycznia 2019 r. Oracle zakończył dostarczanie bezpłatnych aktualizacji Javy SE 8 dla użytkowników komercyjnych. Informacje na ten temat można znaleźć na stronie internetowej Oracle.
-Od tego czasu wszelkie kwestie licencjonowania Javy reguluje <strong>OTN - Oracle Technology Network License Agreement</strong>. Zachęcam do zapoznania się — dokument można znaleźć na stronach Oracle.
-Jednakże z licencji OTN interesuje nas to, że jest nadal wolna do użytku osobistego i do wykorzystania w rozwoju w tym w celach demonstracyjnych.</p>
+Z końcem stycznia 2019 r. Oracle zakończył dostarczanie bezpłatnych aktualizacji Javy SE 8 dla <strong>użytkowników komercyjnych</strong>. Informacje na ten temat można znaleźć na stronie internetowej Oracle.
+Od tego czasu wszelkie kwestie licencjonowania Javy reguluje <strong>OTN — Oracle Technology Network License Agreement</strong>. Zachęcam do zapoznania się — dokument można znaleźć na stronach Oracle.</p>
+
+				<p><strong>Jednakże z licencji OTN interesuje nas to, że jest nadal wolna do użytku osobistego i do wykorzystania w rozwoju w tym w celach demonstracyjnych.</strong></p>
 
 				<p>Te informacje są bardzo ważne, żeby wiedzieć z czego się korzysta i na jakich warunkach. Dlatego postanowiłem o nich krótko wspomnieć i jak zwykle zachęcam samemu przeczytać powyższą licencję.</p>
+				<br/><br/>
 				
-				<h4>Natomiast wracając do głównego tematu</h4>
+				<h4>Wracamy do głównego tematu</h4>
 				<p>Akceptujemy licencję, zaznaczając wymagane pole i po tym pozostaje nam już tylko rejestracja.
 Po rejestracji musimy zweryfikować e-mail.</p>
+
 				<p>Następnie logujemy się na nasze konto na stronie Oracle i jeśli JDK nie zacznie pobierać się automatycznie, musimy ponownie odszukać interesującą nas wersję i ponownie kliknąć link do pobrania.</p>
+				<br/><br/>
 
 				<h4>Po pobraniu instalujemy JDK</h4>
-				<p>W tym celu uruchamiamy pobrany plik i pozostawiając wszystkie ustawienia domyślnie, klikamy Next, aż proces instalacji się rozpocznie.
-Po zakończeniu instalacji pozostało nam jedynie sprawdzić, czy Java jest poprawnie zainstalowana. Aby to sprawdzić, w linii komend cmd wpisujemy <code>java -version</code>, jeśli masz informacje jak na poniższym zdjęciu, oznacza to, że wszystko jest poprawnie zainstalowane.</p>
+				<p>W tym celu uruchamiamy pobrany plik i pozostawiając wszystkie ustawienia domyślnie, klikamy <code>Next</code>, aż proces instalacji się rozpocznie. Gdy JDK jest już zainstalowane, powinniśmy jeszcze ustawić zminną środowiskową <code>PATH</code>.</p>
+				<br/>
+				
+				<h5>Co to jest zmienna środowiskowa i do czego jest nam potrzebna?</h5>
+				<p>Zmienna środowiskowa to dynamiczny <strong>obiekt</strong> w systemie zawierający edytowalną wartość, która może być używana przez jeden lub więcej programów. Zmienne środowiskowe pomagają programom wiedzieć, w którym katalogu instalować pliki, gdzie przechowywać pliki tymczasowe itp.</p>
+				
+				<p>W naszym przykładzie będziemy edytować zmienną <code>PATH</code>, jest to chyba najczęściej używana zmienna środowiskowa, która przechowuje listę katalogów do wyszukiwania programów wykonywalnych.</p>
+				<br/>
+				
+				<h5>Ustawienie zmiennej środowiskowej PATH</h5>
+				<p>Osiągniemy to, kopiując ścieżkę do katalogu <code>\bin</code> - tam, gdzie zainstalowaliśmy JDK. Jeśli przy instalacji JDK pozostawiłeś/aś ustawienia domyślne ścieżka powinna wyglądać tak: <strong>C:\Program Files\Java\jdk1.8.0_281\bin</strong>. Jeśli nie, skopiuj swoją właściwą ścieżkę.</p>
+				
+				<p>Teraz musimy otworzyć okno do zarządzani zmiennymi. W tym celu w menu start wpisujemy <strong>Edytuj zmienne środowiskowe systemu (eng. Edit the system environment variables)</strong>.</p>
+				
+				<div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="Edit the system environment variables" th:src="@{/images/installation-img/var-start.png}">
+				</div>
+				<br/>
+				
+				<p>Naciskamy <code>Enter</code> i powinniśmy przejść do okna jak zaprezentowane poniżej. W którym klikamy <strong>Zmienne środowiskowe (eng. Environment Variables)</strong>.</p>
+				
+				<div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="Environment Variables" th:src="@{/images/installation-img/sys-prop.png}">
+				</div>
+				<br/>
+				
+				<p>Następnie w sekcji <strong>Zmienne systemowe (eng. System variables)</strong> — czerwony kwadrat na poniższym zdjęciu — zaznaczamy zmienną <code>PATH</code> tak, aby podświetliła się na niebiesko i klikamy <code>Edit</code>. </p>
+				
+				<div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="Section System variables" th:src="@{/images/installation-img/env-var.png}">
+				</div>
+				<br/>
+				
+				<p>Powinniśmy otrzymać przybliżony obraz okna jak na pierwszym poniższym zdjęciu. Gdzie dodatkowo klikamy <code>New</code>, a następnie w nowym polu, wpisujemy naszą ścieżkę do JDK - jak na drugim zjęciu. Wychodzimy, zatwierdzając wszystkie wprowadzone zmiany przyciskiem <code>OK</code>.</p>
+				
+				<div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="Select New" th:src="@{/images/installation-img/sel-new.png}">
+				</div>
+				<br/>
+				<div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="Add path" th:src="@{/images/installation-img/add-path.png}">
+				</div>
+				<br/><br/>
+				
+				
+				<h4>Sprawdzenie</h4>
+				<p>Po zakończeniu instalacji i ustawieniu zmiennej środowiskowej pozostało nam jedynie sprawdzić, czy Java jest poprawnie zainstalowana. Aby to zrobić, w linii komend cmd wpisujemy <code>java -version</code>, jeśli masz informacje jak na poniższym zdjęciu, oznacza to, że wszystko jest poprawnie zainstalowane.</p>
+				
+				<div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="Check" th:src="@{/images/installation-img/check.png}">
+				</div>
+				<br/>
 
-				<p>Warto jeszcze na koniec zrestartować komputer, aby wszystkie zmiany zapisały się w systemie prawidłowo jak np. zmienna środowiskowa do IntelliJ. O czym z resztą mieliśmy komunikat po instalacji IDE. Co do zmiennych środowiskowych Javy to program instalacyjny ustawia automatycznie odpowiednią zmienną. Tak więc nie musimy się tym przejmować.</p>
+				<p>Warto jeszcze na koniec zrestartować komputer, aby wszystkie zmiany zapisały się w systemie prawidłowo jak np. zmienna środowiskowa do IntelliJ. O czym z resztą mieliśmy komunikat po instalacji IDE.</p>
 				
 				<p>No cóż, wygląda na to, że dobrnęliśmy do brzegu.</p>
-				<p>Aby przetestować zainstalowane środowisko, zapraszam Cię do sekcji Podstawy, która to jest naturalną kontynuacją zagadnień związanych z Java.
-Zapraszam!</p>  
+				
+				<p>Ja ze swojej strony gratuluję Ci pierwszego postawionego kroku na drodze do zostania programistą Javy. Zdaję sobie sprawę że, to mogła być niełatwa lekcja i nie wszytko jest do końca zrozumiałe. Kwestie konfiguracyjne jak ta często nie należą do najciekawszych a czasami bywają skomplikowane. Mam nadzieje, że ten poradnik wyjaśnił jak należy do sprawy podejść i rozwiał wątpliwości.</p>
+				
+				<p>Dodatkowo, aby przetestować zainstalowane środowisko, zapraszam Cię do sekcji <a th:href="@{/j-basics}">Podstawy</a>, która to jest naturalną kontynuacją zagadnień związanych z Javą na tym blogu.</p>  
+			
+			<p>Zapraszam!</p>
             </div>
         </main>
 
