@@ -6,7 +6,6 @@
     <title>Twój Pierwszy Program</title>
 
     <link th:href="@{/css/main.css}" rel="stylesheet">
-    <link th:href="@{/css/first-program.css}" rel="stylesheet">
     <link th:href="@{/css/fontello.css}" rel="stylesheet">
     <link th:href="@{/css/bootstrap/bootstrap.css}" rel="stylesheet">
 
@@ -34,7 +33,7 @@
             <p>Otwieramy ItelliJ i naszym oczom ukazuje się coś takiego:</p>
             
             <div class="d-flex justify-content-center">
-            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/new-pro.png}" alt="New Project">
+            	<img class="img-fluid mx-0" th:src="@{/images/j-basics-img/first-program-img/new-pro.png}" alt="New Project">
             </div>
             <br/>
             
@@ -50,7 +49,7 @@
             <p>Klikamy <code>Next</code>.</p>
             
             <div class="d-flex justify-content-center">
-            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/creator.png}" alt="Java SDK">
+            	<img class="img-fluid mx-0" th:src="@{/images/j-basics-img/first-program-img/creator.png}" alt="Java SDK">
             </div>
             <br/>
             
@@ -61,12 +60,12 @@
             <p>Niżej mamy <code>More Settings</code> - więcej ustawień. Na chwilę obecną zostawiamy to bez zmian i klikamy <code>Finish</code>.</p>
             
             <div class="d-flex justify-content-center">
-            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/project-name.png}" alt="Project name">
+            	<img class="img-fluid mx-0" th:src="@{/images/j-basics-img/first-program-img/project-name.png}" alt="Project name">
             </div>
             <br/>
             
             
-            <img class="img-fluid float-lg-right d-block mx-auto ml-md-3 " th:src="@{/images/first-program-img/doesnot-ex.png}" alt="Create">
+            <img class="img-fluid float-lg-right d-block mx-auto ml-md-3 " th:src="@{/images/j-basics-img/first-program-img/doesnot-ex.png}" alt="Create">
            
             <p><span class="text-nowrap">Po kliknięciu</span> <code>Finish</code> MOŻE (lecz nie musi) pojawić się komunikat o braku żądanego folderu/katalogu w ścieżce, którą podaliśmy w <code>Project location</code>. To całkiem słuszna uwaga, gdyż faktycznie może go nie być - jeśli nie został stworzony wcześniej. A wynikiem tego jest to, że IntelliJ nie wie w takim wypadku, gdzie ma przechować nasz projekt. Stąd sugeruje nam utworzenie danego folderu/katalogu - klikamy <code>Create</code>.</p>
             <br/><br/>
@@ -75,14 +74,14 @@
             <p>Jeśli widzisz u siebie obraz jak niżej, to znaczy, że prawidłowo stworzyłeś/aś projekt. Jest to główne okno naszego projektu. A z lewej strony powinniśmy mieć możliwość rozwijania drzewa naszego projektu. Teraz wystarczy tylko stworzyć klasę i napisać w niej program.</p>
             
             <div class="d-flex justify-content-center">
-            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/root.png}" alt="Project Tree">
+            	<img class="img-fluid mx-0" th:src="@{/images/j-basics-img/first-program-img/root.png}" alt="Project Tree">
             </div>
             <br/><br/>
             
             <h5>Czym jest wspomniana wyżej <code>KLASA</code>?</h5>
             
             <div class="d-flex justify-content-center">
-            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/classroom.jpg}" alt="Classroom">
+            	<img class="img-fluid mx-0" th:src="@{/images/j-basics-img/first-program-img/classroom.jpg}" alt="Classroom">
             </div>
             <br/>
             
@@ -91,25 +90,25 @@
             <p>Aby to zrobić, rozwijamy drzewo projektu po lewej stronie. Widzimy tam niebieski katalog <code>src</code>. To właśnie w nim będą znajdować się wszystkie klasy niezbędne do działania programu.</p>
             
             <div class="d-flex justify-content-center">
-            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/src.png}" alt="Src">
+            	<img class="img-fluid mx-0" th:src="@{/images/j-basics-img/first-program-img/src.png}" alt="Src">
             </div>
             <br/>
             
-            <img class="img-fluid float-lg-right d-block mx-auto ml-lg-3" th:src="@{/images/first-program-img/new-class-name.png}" alt="New Class Name">
+            <img class="img-fluid float-lg-right d-block mx-auto ml-lg-3" th:src="@{/images/j-basics-img/first-program-img/new-class-name.png}" alt="New Class Name">
             <p><span class="text-nowrap">Klikamy prawym</span> przyciskiem myszy na katalogu <code>src</code> i wybieramy <code>New -> Java Class</code>. Po czym pojawia się okienko o nadaniu nazwy klasie. Nazwijmy naszą prostą klasę jakże kreatywnie <strong>Hello</strong> i zatwierdzamy <code>Enter</code>.</p>
             <br/><br/><br/>
             
             <p>Po chwili ukazuje się nam pusta klasa <code>Hello</code> co potwierdza nam słówko <code>class</code>.</p>
             
             <div class="d-flex justify-content-center">
-            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/hello-class.png}" alt="Hello class">
+            	<img class="img-fluid mx-0" th:src="@{/images/j-basics-img/first-program-img/hello-class.png}" alt="Hello class">
             </div>
             <br/>
             
             <p>Wewnątrz nawiasów klamrowych musimy teraz utworzyć funkcję <code>main()</code>. A robimy to tak jak jest przedstawione na zdjęciu poniżej.</p>
             
             <div class="d-flex justify-content-center">
-            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/main.png}" alt="Main">
+            	<img class="img-fluid mx-0" th:src="@{/images/j-basics-img/first-program-img/main.png}" alt="Main">
             </div>
             <br/>
             
@@ -125,7 +124,7 @@
             <p>A więc, do tego będzie nam potrzebna metod <code>System.out.println()</code>, która wyświetli nam to, co wpiszemy w jej nawiasach w konsoli. Co wpiszemy w nawiasach? To, co jest na zdjęciu poniżej, pamiętaj tylko o cudzysłowie i na końcu koniecznie średnik <code>;</code> no i oczywiście wpisz własne imię! ;)</p>
             
             <div class="d-flex justify-content-center">
-            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/system-out.png}" alt="System.out">
+            	<img class="img-fluid mx-0" th:src="@{/images/j-basics-img/first-program-img/system-out.png}" alt="System.out">
             </div>
             <br/>
             
@@ -134,7 +133,7 @@
             <p>Po chwili, jeśli nie popełniliśmy żadnych błędów, na dole w konsoli powinniśmy otrzymać wynik programu. Czyli napis, który umieściliśmy w nawiasach metody <code>println()</code>.</p>
             
             <div class="d-flex justify-content-center">
-            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/result.png}" alt="Run">
+            	<img class="img-fluid mx-0" th:src="@{/images/j-basics-img/first-program-img/result.png}" alt="Run">
             </div>
             <br/>
             

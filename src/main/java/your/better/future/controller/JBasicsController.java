@@ -16,7 +16,7 @@ public class JBasicsController {
     
     @GetMapping("/first-program")
     String getFirstProgram(){
-        return "j-basics-d/first-program";
+        return "j-basics-t/first-program";
     }
     
 }
