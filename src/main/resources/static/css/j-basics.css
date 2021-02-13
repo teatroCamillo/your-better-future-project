@@ -1,0 +1,14 @@
+ol{
+    list-style-type: none;
+}
+
+ol a{
+	text-decoration:  none;
+	font-weight: bold;
+}
+
+ol a:hover{
+	color: #ff0436;
+	font-weight: bold;
+	text-decoration:  none;
+}

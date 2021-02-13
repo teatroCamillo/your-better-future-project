@@ -6,6 +6,7 @@
     <title>Twój Pierwszy Program</title>
 
     <link th:href="@{/css/main.css}" rel="stylesheet">
+    <link th:href="@{/css/first-program.css}" rel="stylesheet">
     <link th:href="@{/css/fontello.css}" rel="stylesheet">
     <link th:href="@{/css/bootstrap/bootstrap.css}" rel="stylesheet">
 
@@ -18,99 +19,130 @@
     <div class="row w-100 mx-0 px-0 justify-content-center">
         <main class="col-md-8 my-4 mx-3 px-4 py-3 bg-light rounded">
             <h2>Twój Pierwszy Program!</h2>
-            <p>Jeżeli wykonałeś/aś prawidłowo wszystkie kroki z lekcji instalacji Javy oraz IDE to Twój pierwszy program jest tylko formalnością ;)</p>
+            <p>Jeżeli wykonałeś/aś prawidłowo wszystkie kroki z sekcji <a th:href="@{/installation}">Instalacja</a> to Twój pierwszy program jest tylko formalnością ;)</p>
             
             <p>Nie musisz jeszcze znać składni języka, skomplikowanych metod, algorytmów czy jak to wszystko działa. Ta wiedza przyjdzie z czasem - nie przejmuj
-            się. Najważniejsze jest aby cierpliwie krok po kroku poznawać język we właściwej koljności tematycznej oraz nie zapomnieć cieszyć się tym co stworzyliśmy.</p>
+            się. Najważniejsze jest, aby cierpliwie krok po kroku poznawać język we właściwej kolejności tematycznej oraz nie zapomnij cieszyć się tym, co stworzysz.</p>
             
             <p>Ok, dość gadania, zaczynajmy!</p>
-            
-            <div style="min-height: 4rem;"></div>
+            <br/><br/>
             
             <h4>Tworzenie projektu</h4>
-            
-            <p>W zależności kiedy przerabiasz tę lekcję wersja środowiska może być już inna. Nie przejmuj się tym gdyż to na pewno będą jedynie drobne zmiany wizualne lub odpwiedzialne za lepsze działanie programu. Wszystko na plus ;) Tak więc na pewno sobie poradzisz!</p>   
+            <p>W zależności, kiedy przerabiasz tę lekcję wersja środowiska może być już inna. Nie przejmuj się tym gdyż to na pewno będą jedynie drobne zmiany wizualne lub odpowiedzialne za lepsze działanie programu. Wszystko na plus ;)</p>   
                   
-            <p>Pierwszym krokiem do stworzenia programu jest utworzenie projektu w środowisku. Tak wiec tym się teraz zajmniemy.</p>
+            <p>Pierwszym krokiem do stworzenia programu jest utworzenie projektu w środowisku. Tak więc tym się teraz zajmiemy.</p>
             <p>Otwieramy ItelliJ i naszym oczom ukazuje się coś takiego:</p>
             
-            <img class="img-fluid mb-3" th:src="@{/images/first-program-img/1.png}" alt="Screenshot from IntelliJ">
+            <div class="d-flex justify-content-center">
+            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/new-pro.png}" alt="New Project">
+            </div>
+            <br/>
             
-            <p>Jest to główne okno w przypadku gdy środowiko zostało dopiero co zainstalowane i nie posiada jeszcze żadnych aktywnych porjektów. Jeśli widzisz inny obraz po otwarciu IDE i uruchomiło Ci się całe okno gotowe do pracy to nie przejmuj się wystarczy tylko w lewym górnym rogu kliknać <code>File -> Close Project</code>. Ta operacja powinna przenieść Cię do miejsca przedstawionego na powyższej ilustracji.</p>
             
-            <p>Aby utworzyć nowy projekt klikamy <code>New Project</code> jak sugeruje nam creator.</p>
+            <p>Jest to główne okno w przypadku gdy środowisko zostało dopiero co zainstalowane i nie posiada jeszcze żadnych aktywnych projektów. Jeśli widzisz inny obraz po otwarciu IDE i uruchomiło Ci się całe okno gotowe do pracy, to nie przejmuj się wystarczy tylko w lewym górnym rogu kliknać <code>File -> Close Project</code>. Ta operacja powinna przenieść Cię do miejsca przedstawionego na powyższej ilustracji.</p>
             
-            <p>Następnie powinniśmy znaleść się w oknie z wyborem jaki dokładnie projekt chcemy utworzyć. Jest tu kilka opcji my natomiast wybieramy pierwszą opcję bez żadnych dodatków. Czyli klikamy <code>Java</code> a następnie <code>Next</code>.</p>
+            <p>Aby utworzyć nowy projekt klikamy <code>New Project</code>, jak sugeruje nam kreator.</p>
             
-            <img class="img-fluid mb-3" th:src="@{/images/first-program-img/2.png}" alt="Screenshot from IntelliJ">
+            <p>Następnie powinniśmy znaleść się w oknie z wyborem jaki dokładnie projekt chcemy utworzyć. Jest tu kilka opcji, my natomiast wybieramy pierwszą opcję - <code>Java</code> - bez żadnych dodatków. Na górze kreatora mamy jeszcze coś takiego jak <strong>SDK - Software Development Kit</strong> - jest to nic innego jak inna nazwa na <strong>JDK</strong>. W tym też miejscu możemy wybrać wersję, w jakiej chcemy pisać program - my zostawiamy to bez zmian.</p>
+             
+            <p>Dodam jeszcze, że SDK jest bardziej ogólnym pojęciem, ponieważ może tyczyć się wielu innych technologii np. Python SDK czy DirectX SDK.</p>
             
-            <p>Potem pojawia się okono z polem do zaznaczenia o treści <i>Create project form template</i> jest to możliwość stworzenia projektu z szablonu. Pomijamy tę opcję klikając <code>Next</code>. My tworzymy własny porjekt ;)</p>
+            <p>Klikamy <code>Next</code>.</p>
             
-            <p>W tym miejscu w linii <code>Project name</code> ustalamy nazwę projektu - wpisujemy jak na zdjeciu <code>hello</code>. Natomiast <code>Project location</code> jak nazwa sugeruje jest to lokalizacja projektu w systemie. Pamiętajmy że jest to konkretny folder. Dodatkowo jak pewnie zauważyłeś/aś lokalizacja projektu wpisała się automatycznie w momencie wpisywania nazwy i folder/katalog ma dokładni taką samą nazwę co projekt. Można ustalić własną lokalizację po porstu ją wpisując my natomiast zostawimy domyślne ustawienie środowiska.</p>
+            <div class="d-flex justify-content-center">
+            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/creator.png}" alt="Java SDK">
+            </div>
+            <br/>
+            
+            <p>Następnie pojawia się okno z polem do zaznaczenia o treści <strong>Create project form template</strong>, jest to możliwość stworzenia projektu z szablonu. Pomijamy tę opcję klikając <code>Next</code>. My tworzymy własny porojekt ;)</p>
+            
+            <p>W tym miejscu w linii <code>Project name</code> ustalamy nazwę projektu - wpisujemy jak na zdjęciu <code>hello</code>. Natomiast <code>Project location</code> jak nazwa sugeruje, jest to lokalizacja projektu w systemie. Pamiętajmy, że jest to konkretny folder. Dodatkowo jak pewnie zauważyłeś/aś lokalizacja projektu wpisała się automatycznie w momencie wpisywania nazwy i folder/katalog ma dokładnie taką samą nazwę co projekt. Można ustalić własną lokalizację, po prostu ją wpisując. My natomiast zostawimy domyślne ustawienie środowiska.</p>
             
             <p>Niżej mamy <code>More Settings</code> - więcej ustawień. Na chwilę obecną zostawiamy to bez zmian i klikamy <code>Finish</code>.</p>
             
-            <img class="img-fluid mb-3" th:src="@{/images/first-program-img/3.png}" alt="Screenshot from IntelliJ">
+            <div class="d-flex justify-content-center">
+            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/project-name.png}" alt="Project name">
+            </div>
+            <br/>
             
-            <div style="min-height: 2rem;"></div>
             
-            <p><img class="img-fluid" th:src="@{/images/first-program-img/dir-not-ex.png}" alt="Screenshot from IntelliJ" style="float: right;">Po kliknięciu <code>Finish</code> MOŻE(lecz nie musi) pojawić się komunikat o braku żądanego folderu/katalogu w ścieżce, którą podaliśmy w <code>Project location</code>. To całkiem słuszna uwaga gdyż faktycznie może go nie być - jeśli nie został stworzony wcześniej. A wynikiem tego jest to że IntelliJ nie wiem w takim wypadku gdzie ma przechować nasz projekt. Stąd sugeruje nam utworzenie danego folderu/katalogu - klikamy <code>Create</code>.</p>
-            
-            <div style="min-height: 3rem;"></div>
+            <img class="img-fluid float-lg-right d-block mx-auto ml-md-3 " th:src="@{/images/first-program-img/doesnot-ex.png}" alt="Create">
+           
+            <p><span class="text-nowrap">Po kliknięciu</span> <code>Finish</code> MOŻE (lecz nie musi) pojawić się komunikat o braku żądanego folderu/katalogu w ścieżce, którą podaliśmy w <code>Project location</code>. To całkiem słuszna uwaga, gdyż faktycznie może go nie być - jeśli nie został stworzony wcześniej. A wynikiem tego jest to, że IntelliJ nie wie w takim wypadku, gdzie ma przechować nasz projekt. Stąd sugeruje nam utworzenie danego folderu/katalogu - klikamy <code>Create</code>.</p>
+            <br/><br/>
             
             <h4>Mamy projekt - pora na Pierwszy Program!</h4>
+            <p>Jeśli widzisz u siebie obraz jak niżej, to znaczy, że prawidłowo stworzyłeś/aś projekt. Jest to główne okno naszego projektu. A z lewej strony powinniśmy mieć możliwość rozwijania drzewa naszego projektu. Teraz wystarczy tylko stworzyć klasę i napisać w niej program.</p>
             
-            <p>Jeśli widzisz u siebie obraz jak niżej to gratuluję! Wykonałeś/aś już sporo pracy. Teraz wystarczy tylko stworzyć klasę i napisać w niej program.</p>
+            <div class="d-flex justify-content-center">
+            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/root.png}" alt="Project Tree">
+            </div>
+            <br/><br/>
             
-            <img class="img-fluid mb-3" th:src="@{/images/first-program-img/4.png}" alt="Screenshot from IntelliJ">
+            <h5>Czym jest wspomniana wyżej <code>KLASA</code>?</h5>
             
-            <p>Jak widać, zostaliśmy przeniesieni do głównego okna naszego projektu. A z lewej strony powinniśmy mieć możliwość rozwijania drzewa naszego projektu.</p>
+            <div class="d-flex justify-content-center">
+            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/classroom.jpg}" alt="Classroom">
+            </div>
+            <br/>
             
-            <div style="min-height: 2rem;"></div>
+            <p>Nie, nie, nie taka klasa. Pojęcie <code>KLASY</code> w językach obiektowych jest ich główną ideą. Jednak na ten moment to zbyt wcześnie, aby dokładnie wyjaśniać ten aspekt. <code>Klasa</code> zostanie dokładnie omówiona w sekcji <strong>OOP - Object Oriented Programming</strong> poświęconej programowaniu obiektowemu. Aktualnie wystarczy nam wiedzieć, że dążymy do stworzenia tzw. klasy uruchomieniowej, która ma zadanie uruchomić nasz program.</p>
             
-            <h6>Czym jest wspomniana wyżej <code>KLASA</code>?</h5>
+            <p>Aby to zrobić, rozwijamy drzewo projektu po lewej stronie. Widzimy tam niebieski katalog <code>src</code>. To właśnie w nim będą znajdować się wszystkie klasy niezbędne do działania programu.</p>
             
-            <img class="img-fluid mb-3" th:src="@{/images/first-program-img/classroom.jpg}" alt="Classroom">
+            <div class="d-flex justify-content-center">
+            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/src.png}" alt="Src">
+            </div>
+            <br/>
             
-            <p>Nie, nie, nie taka klasa. Pojęcie <code>klasy</code> w językach obiektowych jest ich główną ideą. Jednka na ten moment to zbyt wcześnie aby wyjaśniać ten aspekt. <code>Klasa</code> zostnie dokładnie omówiona w sekcji OOP poświęconej porogramowaniu obiektowem. Aktualnie wystarczy nam wiedzieć że dążymy do stworzenia tzw. klasy uruchomieniowej, która ma zadanie uruchomić nasz program.</p>
+            <img class="img-fluid float-lg-right d-block mx-auto ml-lg-3" th:src="@{/images/first-program-img/new-class-name.png}" alt="New Class Name">
+            <p><span class="text-nowrap">Klikamy prawym</span> przyciskiem myszy na katalogu <code>src</code> i wybieramy <code>New -> Java Class</code>. Po czym pojawia się okienko o nadaniu nazwy klasie. Nazwijmy naszą prostą klasę jakże kreatywnie <strong>Hello</strong> i zatwierdzamy <code>Enter</code>.</p>
+            <br/><br/><br/>
             
-            <p>Aby to zrobić rozwijamy drzewo projektu po lewej stronie. Widzimy tam niebieski katalog <code>src</code>. To właśnie w nim będą znajdować się wszystkie klasy, które będą potrzebne do działania programu.</p>
+            <p>Po chwili ukazuje się nam pusta klasa <code>Hello</code> co potwierdza nam słówko <code>class</code>.</p>
             
-            <img class="img-fluid mb-3" th:src="@{/images/first-program-img/5.png}" alt="Screenshot from IntelliJ">
+            <div class="d-flex justify-content-center">
+            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/hello-class.png}" alt="Hello class">
+            </div>
+            <br/>
             
-            <p style="margin-bottom: 4rem;"><img class="img-fluid" th:src="@{/images/first-program-img/6.png}" alt="Screenshot from IntelliJ" style="float: right;">Klikamy prawym przyciskiem myszy na katalogu <code>src</code> i wybieramy <code>New -> Java Class</code>. Po czym pojawia się okienko o nadaniu nazyw klasie. Nazwijmy naszą prostą klasę jakże kreatywnie "Hello" ;) i zatwierdzamy enterem.</p>
+            <p>Wewnątrz nawiasów klamrowych musimy teraz utworzyć funkcję <code>main()</code>. A robimy to tak jak jest przedstawione na zdjęciu poniżej.</p>
             
-            <p>Po chwili ukazuje się nam pusta klasa <code>Hello</code>.</p>
+            <div class="d-flex justify-content-center">
+            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/main.png}" alt="Main">
+            </div>
+            <br/>
             
-            <img class="img-fluid mb-3" th:src="@{/images/first-program-img/7.png}" alt="Screenshot from IntelliJ">
+            <p>Właściwie <strong>funkcja</strong> to błędne określenie. W Javie poprawnie powinniśmy nazwać tę instrukcję <strong>metodą</strong> <code>main()</code>. Dlaczego tak? To wyjaśnię w innym artykule, tak samo, jak to, co oznacza <code>public</code>, <code>static</code>, <code>void</code> czy <code>String[] args</code>.</p>
             
-            <p>Wewnątrz nawiasów klamrowych musimy teraz utworzyć funkcję <code>main()</code> a robimy to tak jak jest przedstawione na zdjęciu poniżej.</p>
+            <p>Tak więc metoda <code>main()</code> jest główną metodą w programie i bez niej program nie zadziała. Ogólne jej działanie polega na tym, że wszystko, co jest pomiędzy klamrami, linia po linii zostanie wykonane od góry do dołu, a na końcu program automatycznie się zamknie.</p>
             
-            <img class="img-fluid mb-3" th:src="@{/images/first-program-img/8.png}" alt="Screenshot from IntelliJ">
+            <p>Dodatkowo jak na pewno zauważyłeś/aś po lewej stronie są dwa zielone trójkąciki (dodatkowo możesz mieć jeszcze jeden na górnym pasku z narzędziami). Do bólu przypominają te ze starych magnetofonów, oznaczające nic innego jak <strong>Play</strong> - graj muzyko. Tutaj mamy analogie, ponieważ te przyciski oznaczają uruchomienie programu i na pewno ich jeszcze dziś użyjemy. Ale zanim to zrobimy, wypadałoby najpierw mieć co uruchomić. I teraz właśnie do tego przechodzimy.</p>
             
-            <p>Właściwie "funkcja" to błędne określenie. W Javie poprawnie powinniśmy nazwać ją "metodą" <code>main()</code>. Dlaczego tak? To wyjaśnię w innym artykule tak samo jak to co oznacza <code>public</code>, <code>static</code>, <code>void</code> czy <code>String[] args</code>.</p>
+            <h5>Hello World</h5>
+            <p>Program, który stworzymy będzie wyświetlał napis <strong>Hello World</strong> - co jest już swego rodzaju tradycją w świecie programowania. My oczywiście skorzystamy z tej tradycji, aby pamiętać skąd pochodzimy, ale dodamy coś od siebie, coś nowego i świeżego, bo czym byśmy byli bez rozwoju i ewolucji? Chęć rozwoju to wręcz naturalny proces.</p>
             
-            <p>Tak więc metoda <code>main()</code> jest główną metodą w programie i bez niej program nie zadziała. Ogólne jej działanie polega na tym że wszystko co jest pomiędzy klamarami lini po linii zostanie wykonane od góry do dołu a na końcu program automatycznie się zamknie.</p>
+            <p>A więc, do tego będzie nam potrzebna metod <code>System.out.println()</code>, która wyświetli nam to, co wpiszemy w jej nawiasach w konsoli. Co wpiszemy w nawiasach? To, co jest na zdjęciu poniżej, pamiętaj tylko o cudzysłowie i na końcu koniecznie średnik <code>;</code> no i oczywiście wpisz własne imię! ;)</p>
             
-            <p>Dodatkowo jak na pewno zauważyłeś/aś po lewej stronie są dwa zielone trójkąciki (dodatkowo możesz mieć jeszcze jeden na górnym pasku z narzędziami). Do bólu przypominają te ze starych magnetofonów, oznaczające nic innego jak "Play" - graj muzyko. Tutaj mamy analogie, poneważ te przyciski oznaczają uruchomienie porgramu i na pewno ich jeszcze dziś użyjemy. Ale zanim to zrobimy wypadałoby najpierw mieć co uruchomić. I teraz właśnie do tego przechodzimy.</p>
+            <div class="d-flex justify-content-center">
+            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/system-out.png}" alt="System.out">
+            </div>
+            <br/>
             
-            <p>Program, który stworzymy będzie wyświetlał napis "Hello World" - co jest już swego rodzaju tradycją w świecie programowania. My oczywiście skorzystamy z tej tradycji aby pamiętać skąd pochodzimy ale dodamy coś od siebie, coś nowego i świeżeo bo czym byśmy byli bez rozwoju i ewolucji? Chęć rozwoju to wręcz naturalny proces.</p>
+            <p>Ok, jeśli to mamy to nie pozostaje nam nic innego jak tylko uruchomić program i sprawdzić, czy działa. Aby to zrobić klikamy lewym przyciskiem myszy jeden z zielonych trójkątów (dowolny) i wybieramy <code>Run 'Hello.main()'</code>.</p>
             
-            <p>A więc, do tego będzie nam potrzebna metod <code>System.out.println()</code>, która wyświetli nam to co wpiszemy w jej nawiasach w konsoli. Co wpiszemy w nawiasach? To co jest na zdjęciu, proszę tylko pamiętaj o cudzysłowiu i na końcu koniecznie średnik <code>;</code> no i oczywiście wpisz własne imię! ;)</p>
+            <p>Po chwili, jeśli nie popełniliśmy żadnych błędów, na dole w konsoli powinniśmy otrzymać wynik programu. Czyli napis, który umieściliśmy w nawiasach metody <code>println()</code>.</p>
             
-            <img class="img-fluid mb-3" th:src="@{/images/first-program-img/9.png}" alt="Screenshot from IntelliJ">
+            <div class="d-flex justify-content-center">
+            	<img class="img-fluid mx-0" th:src="@{/images/first-program-img/result.png}" alt="Run">
+            </div>
+            <br/>
             
-            <p>Ok, jeśli to mamy to nie pozostaje nam nic innego jak tylko uruchomić prograć i sprawdzić czy działa. Aby to zrobić klikamy lewym przyciskiem myszy jeden z zielonych trójkątów(dowolny) i wybieramy <code>Run 'Hello.main()'</code></p>
-            
-            <p>Po chwili jeśli nie popełniliśmy żadnych błędów na dole w konsoli powinniśmy otrzymać wynik porgramu. Czyli napis, który umieściliśmy w nawiasach metody <code>println()</code>.</p>
-            
-            <img class="img-fluid mb-3" th:src="@{/images/first-program-img/10.png}" alt="Screenshot from IntelliJ">
-            
-            <p>Jeśli masz inny widok niż na powyższym zdjęciu. Sprawdz jeszcze raz kod. Być może popełniłeś gdzieś literówkę lub brakuje cudzysłowia czy średnika. Gdyby to nie pomogło przejrzyj całą lekcję jeszcze raz i sprawdz czy czegoś nie pominąłeś/aś.</p>
+            <p>Jeśli masz inny widok niż na powyższym zdjęciu. Sprawdź jeszcze raz kod. Być może popełniłeś/aś gdzieś literówkę lub brakuje cudzysłowu czy średnika. Gdyby to nie pomogło, przejrzyj całą lekcję jeszcze raz i sprawdź czy czegoś nie pominąłeś/aś.</p>
             
             <p>Tak więc gratuluję! Napisałeś swój pierwszy program w języku Java. Well done! ;)</p>
             
-            <p>Progrma co prawda nie robi za wiele ale tak naprawdę osiągneliśmy coś ważniejszego w tej lekcji. A mianowicie przeszliśmy przez ogólny proces tworzenia programu i jego uruchomienia poparty ogólnym konceptualnym zrozumieniem. Co prawda nie wszystko jest jeszcze jasne ale to przyjdzie z czasem. A każdy program w uproszczenieu tak własnie wygląda. Nic skomplikowanego a dodatkowo sama przyjemność z procesu kreacji :) </p>
+            <p>Program co prawda nie robi za wiele, ale tak naprawdę osiągnęliśmy coś ważniejszego w tej lekcji. A mianowicie przeszliśmy przez ogólny proces tworzenia programu i jego uruchomienia poparty ogólnym konceptualnym zrozumieniem. Co prawda nie wszystko jest jeszcze jasne, ale to przyjdzie z czasem. A każdy program w uproszczeniu tak właśnie wygląda. Nic skomplikowanego a dodatkowo sama przyjemność z procesu kreacji :) </p>
             
             <p>Cóż, mi pozostaje już tylko zaprosić Cię do kolejnych lekcji i życzyć powodzenia w dalszej nauce programowania.</p>
         </main>
