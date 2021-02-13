@@ -6,16 +6,34 @@ html, body{
     color: black !important;
 }
 
+/*Header #########################################################################################################*/
+
+nav{
+	min-height: 4rem !important;
+}
+
 h1, h2, h3, h4, h4, h5{
 	font-weight: 600 !important;
 }
 
-li > a{
+.nav-link{
 	color: black !important;
+	transition: color .5s ease-in-out, background-color .5s ease-in-out;
+}
+
+.nav-link:hover{
+	color: white !important;
+	background-color: #1b1e21 !important;
 }
 
 p{
 	text-align: justify !important;
+}
+
+/*Aside #########################################################################################################*/
+
+aside{
+	height: fit-content !important;
 }
 
 /*Footer #########################################################################################################*/
@@ -25,6 +43,7 @@ p{
 
 .fb{
     min-height: 3rem;
+   	transition: background-color .5s ease-in-out;
 }
 
 .fb:hover{
@@ -33,6 +52,7 @@ p{
 
 .inst{
     min-height: 3rem;
+    transition: background-color .5s ease-in-out;
 }
 
 .inst:hover{
@@ -41,6 +61,7 @@ p{
 
 .tw{
     min-height: 3rem;
+    transition: background-color .5s ease-in-out;
 }
 
 .tw:hover{
@@ -49,6 +70,7 @@ p{
 
 .in{
     min-height: 3rem;
+    transition: background-color .5s ease-in-out;
 }
 
 .in:hover{
@@ -57,6 +79,7 @@ p{
 
 .gh{
     min-height: 3rem;
+    transition: background-color .5s ease-in-out;
 }
 .gh:hover {
     background-color: #0004ff;
@@ -64,18 +87,20 @@ p{
 
 .gm{
     min-height: 3rem;
+    transition: background-color .5s ease-in-out;
 }
 
 .gm:hover{
-    background-color: #bb001b;
+    background-color: #ff0000;
 }
 
 a.tlink{
     text-decoration: none;
     color: #555555!important;
+    transition: color .5s ease-in-out;
 }
 
 a.tlink:hover{
-    color: #1f1f1f!important;
+    color: #fff !important;
 }
 

@@ -6,6 +6,7 @@
     <title>Java - Podstawy</title>
 
     <link th:href="@{/css/main.css}" rel="stylesheet">
+    <link th:href="@{/css/j-basics.css}" rel="stylesheet">
     <link th:href="@{/css/fontello.css}" rel="stylesheet">
     <link th:href="@{/css/bootstrap/bootstrap.css}" rel="stylesheet">
 
@@ -17,43 +18,45 @@
 <div class="container my-0">
     <div class="row w-100 mx-0 px-0 justify-content-center">
 
-        <main class="col-md-8 my-4 mx-3 px-4 py-3 bg-light">
+        <main class="col-md-8 my-4 mx-3 px-4 py-3 bg-light rounded">
             <div>
                 <h2>Podstawy</h2>
-                <p class="lh-sm">
-                    W tej sekcji zajmiemy się absolutnymi podstawami tak, aby każdy mógł bez problemu rozpocząć swoją przygodę z programowaniem.
-                </p>
-                <p class="lh-sm">
-                    Omówimy tematy takie jak: zmienne, operatory, tablice, instrukcje warunkowe czy pętle. Dobre zrozumienie tych lekcji jest niezbędne do stworzenia solidnych fundamentów dzięki którym będziesz mógł/mogła swobodnie kontynuować poznawanie i korzystanie z Javy w aspektach średniozaawansowanych i zaawansowanych oraz niewątpliwie przyczyni się do jakości twojego kodu.
-                </p>
+                <p>W tej sekcji poznamy podstawową wiedzę dotyczącą programowania w Javie.</p>
                 
-                <p>Jeszcze zanim zaczniemy chciałbym uprzedzić Cię że na początku wiele nie będziesz rozumiał/a. Mam tu na myśli co dokładnie oznaczają pewne instrukcje, linie kodu, pojedyńcze słowa kluczowe. To wszystko będzie wyjaśniane we właściwym czasie i zgodnie z kolejnościa właściwego uczenia się. Jeśli czegoś nie omawima albo omijam to robię to świadomie gdyż nie jest to niezbędna wiedza na dany moment. Proszę bądz dla siebie cierpliwy/a rozumienie całości przyjdzie z czasem. A nikt jeszcze nie nauczył się programowania w jeden dzień. To wszystko musi się na spokojnie poukładać w głowie  </p>
+                <div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="ABC" th:src="@{/images/j-basics-img/abc.jpg}">
+				</div>
+				<br/>
                 
-                <p class="lh-sm">
-                    Tak więc bez zbędnego przedłużania zaczynamy!
-                </p>
+                <p>Omówimy tematy takie jak: <strong>zmienne, operatory, tablice, instrukcje warunkowe czy pętle</strong>. Dobre zrozumienie tych lekcji jest niezbędne do stworzenia solidnych fundamentów, dzięki którym będziesz mógł/mogła swobodnie kontynuować poznawanie i korzystanie z Javy w aspektach średniozaawansowanych i zaawansowanych oraz niewątpliwie przyczyni się do jakości twojego kodu.</p>
+                
+                <p>Jeszcze zanim zaczniemy, chciałbym uprzedzić Cię, że na początku wiele nie będziesz rozumiał/a. Mam tu na myśli co dokładnie oznaczają pewne instrukcje, linie kodu, pojedyncze słowa kluczowe. To wszystko będzie wyjaśniane we właściwym czasie i zgodnie z kolejnością właściwego uczenia się. Ponieważ czasami jest po prostu za wcześnie, aby zrozumieć jakieś pojęcie, a to dlatego, że nie znamy wystarczająco dobrze podstaw. Dla przykładu: nie próbujesz czytać nie znając alfabetu, tak? Taka postawa potrafi zniechęcić człowieka do nauki i tylko opóźnić jego progres.</p>
+                
+                <p>Jeśli czegoś nie omawiam albo omijam, to robię to świadomie, gdyż nie jest to niezbędna wiedza na dany moment. Moja rada: bądź dla siebie cierpliwy/a, rozumienie całości przyjdzie z czasem. A nikt jeszcze nie nauczył się programowania w jeden dzień. To wszystko musi się na spokojnie poukładać w głowie.</p>
+                
+                <p>Tak więc bez zbędnego przedłużania zaczynamy!</p>
 
                 <ol>
-                    <li>
-                        <a class="pe-auto" href="/j-basics/first-program">Twój pierwszy program!</a>
+                	<li>
+                		<a th:href="@{/j-basics/first-program}">1. Twój pierwszy program!</a>
                     </li>
                     <li>
-                        <a class="pe-auto" href="#">Zmienne.</a>
+                    	<a th:href="@{#}">2. Zmienne</a>
                     </li>
                     <li>
-                        <a class="pe-auto" href="#">Operatory.</a>
+                        <a href="#">3. Operatory</a>
                     </li>
                     <li>
-                        <a class="pe-auto" href="#">Łańcuchy znaków.</a>
+                        <a href="#">4. Łańcuchy znaków</a>
                     </li>
                     <li>
-                        <a class="pe-auto" href="#">Instrukcje warunkowe.</a>
+                        <a href="#">5. Instrukcje warunkowe</a>
                     </li>
                     <li>
-                        <a class="pe-auto" href="#">Pętle.</a>
+                        <a href="#">6. Pętle</a>
                     </li>
                     <li>
-                        <a class="pe-auto" href="#">Tablice.</a>
+                        <a href="#">7. Tablice</a>
                     </li>
                 </ol>
             </div>

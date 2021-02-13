@@ -17,30 +17,39 @@
 <div class="container my-0">
     <div class="row w-100 mx-0 px-0 justify-content-center">
 
-        <main class="col-md-8 my-4 mx-3 px-4 py-3 bg-light">
+        <main class="col-md-8 my-4 mx-3 px-4 py-3 bg-light rounded">
             <div>
                 <h2>JAVA - START!</h2>
                 <p>
                     Zapraszam do pierwszej sekcji poświęconej językowi JAVA. Zajmiemy się tutaj absolutnymi podstawami tak, aby każdy mógł bez problemu rozpocząć swoją przygodę z programowaniem.
                 </p>
+                
+                <div class="d-flex justify-content-center">
+					<img class="img-fluid mx-0" alt="Java Start" th:src="@{/images/java-start-img/java-star.jpg}">
+				</div>
+				<br/>
+                
                 <h4>Czym w ogóle jest JAVA?</h4>
 
-                <p>Najprościej mówiąc JAVA jest jednym z najbardziej popularnych język programowania zorientowanym obiektowo.</p>
+                <p>Najprościej mówiąc, JAVA jest jednym z najbardziej popularnych język programowania zorientowanym obiektowo.</p>
+				<br/><br/>
+
 
                 <h4>Szerokie zastosowanie</h4>
 
-                <p>Java jest językiem ogólnego zastosowania co oznacza że można ją spotkać prawie wszędzie.</p>
+                <p>Java jest językiem ogólnego zastosowania, co oznacza, że można ją spotkać prawie wszędzie.</p>
 
                 <h5>Przykładami mogą tu być:</h5>
                 <ul>
                     <li>aplikacje desktopowe</li>
                     <li>serwery aplikacyjne</li>
-                    <li>aplikacje mobline</li>
+                    <li>aplikacje mobilne</li>
                     <li>systemy bankowe</li>
                     <li>aplikacje korporacyjne</li>
                     <li>aplikacje webowe</li>
                 </ul>
                 <p>To jedynie kilka z przykładowych gałęzi zastosowań języka, w rzeczywistości jest tego znacznie więcej.</p>
+                <br/><br/>
 
                 <h5>Popularne serwisy oparte na języku Java</h5>
                 <ul>
@@ -51,37 +60,45 @@
                     <li>Amazon</li>
                     <li>LinkedIn</li>
                 </ul>
+                <br/><br/>
 
                 <h4>Krótko o historii</h4>
-                <p>Twórcami języka są James Gosling, Mike Sheridan i Patric Naughton z firmy Sun Microsystems. Początkowo język powstawał w ramach projektu Green po nazwą OAK.</p>
+                <p>Twórcami języka są James Gosling, Mike Sheridan i Patrick Naughton z firmy Sun Microsystems. Początkowo język powstawał w ramach projektu Green pod nazwą OAK.</p>
 
                 <p>W 1995 roku w San Francisco na konferencji SunWorld język został publicznie zaprezentowany pod nazwą Java. W tym samym roku firma Sun wydała pierwszą publiczną implementację Java 1.0.</p>
 
-                <p>Nastęnie w roku 1996 pod kątem webowym pojawiła się przeglądarka Netscape 2.0, kótra to była kompatybilna z Javą 1.0. Co niewątpliwie przyczyniło się do wzrostu zainteresowania językiem.</p>
+                <p>Następnie w roku 1996 pod kątem webowym pojawiła się przeglądarka Netscape 2.0, która to była kompatybilna z Javą 1.0. Co niewątpliwie przyczyniło się do wzrostu zainteresowania językiem.</p>
 
-                <p>Kolejne wydanie języka tym razem w 1998 roku firma publikuje Java 2 SE (Standard Edition) z około 2300 klasami. Następnie w tym samym roku wypuszczona zostaje Java 2 EE (Enterprise Edition) oraz Java 2 ME (Micro Edition). J2EE zawierała technologie oraz interfejsy API przeznaczone dla środowisk koroporacyjnych czy serwerowych. W odróżnieniu od J2EE J2ME zawierała interfejsy zoptymalizowane pod kątem aplikacji mobilnych.</p>
+                <p>Kolejne wydanie języka tym razem w 1998 roku firma publikuje Java 2 SE (Standard Edition) z około 2300 klasami. Następnie w tym samym roku wypuszczona zostaje Java 2 EE (Enterprise Edition) oraz Java 2 ME (Micro Edition). J2EE zawierała technologie oraz interfejsy API przeznaczone dla środowisk korporacyjnych czy serwerowych. W odróżnieniu od J2EE J2ME zawierała interfejsy zoptymalizowane pod kątem aplikacji mobilnych.</p>
 
                 <p>W 2006 roku powstaje Java FX przeznaczona głównie do tworzenia aplikacji desktopowych.</p>
 
-                <p>W 2010 roku firma Oracle przejmuje Javę. Następne lata to kolejne wersje języka. Nie będę wymieniać tu wszystkich ale, o których warto wspomnieć to na pewno te z LTS (long-term support - długi okres wsparcia), czyli Java SE8 z 2014 roku, Java SE11 oraz przyszła wersja, która zostanie wydana we wrześniu bieżącego roku (2021).</p>
-
-                <p>Dobrze, po tym krótkim i ogólnym wstępie pora przejść do zagadnień związanych już z samym programowaniem oraz z tym jak to się odbywa. Tak więc zaczynajmy.</p>
+                <p>W 2010 roku firma Oracle przejmuje Javę. Następne lata to kolejne wersje języka. Nie będę wymieniać tu wszystkich, ale, o których warto wspomnieć to na pewno te z LTS (long-term support — długi okres wsparcia), czyli Java SE8 z 2014 roku, Java SE11 oraz przyszła wersja, która zostanie wydana we wrześniu bieżącego roku (2021).</p>
+                <br/><br/>
 
                 <h4>Kluczowe koncepcje języka</h4>
+                <br/>
                 <h5>Obiektowość</h5>
-                <p>Obiektowość oznacza że programy napisane za pomocą Javy są zbiorami współpracujących obiektów. Gdzie każdy obiekt posiada swój stan i metody, które wykonuje oraz wymienia informacje z innymi obiektami w celu osiągnięcia założonego przez programistę efektu.</p>
-                <p> Obiekt natomiast, w rozumieniu twórców to każdy dający się wyodrębnić element rzeczywistości tak samo fizyczny jak i abstrakcyjny. Dla przykładu obiektem może być samochód, zwierze, człowiek, konto użytkownika w serwisie czy emocje.</p>
+                <p>Obiektowość oznacza, że programy napisane za pomocą Javy są zbiorami współpracujących obiektów. Gdzie każdy obiekt posiada swój stan i metody, które wykonuje oraz wymienia informacje z innymi obiektami w celu osiągnięcia założonego przez programistę efektu.</p>
+                <p> Obiekt natomiast, w rozumieniu twórców to każdy dający się wyodrębnić element rzeczywistości tak samo fizyczny, jak i abstrakcyjny. Dla przykładu obiektem może być samochód, zwierze, człowiek, konto użytkownika w serwisie czy emocje.</p>
+                <br/><br/>
+                
+                <h5>Prostota</h5>
+                <p>W porównaniu do języka programowania C++, Java została pozbawiona wielu nieużytecznych lub trudnych w zastosowaniu i błędnych konstrukcji. Dzięki temu jest naprawdę łatwa w nauce i użytkowaniu.</p>
+                <br/><br/>
 
                 <h5>Dziedziczenie</h5>
-                <p>Dziedziczenie jest mechanizmem, który pozwala obiektom na dosłowne odziedziczenie zachowań i stanów obietków położonych wyżej w hierarchii. Można powiedzieć że obiekt-dziecko dziedziczy/przejmuje cechy po obiekcie-rodzic. To bardzo przydatny mechanizm gdyż czasami chcąc tworzyć obiekty które różnią się od siebie jedynie jednym stanem czy metodą a poza tym są takie same ten mechanizm oszczędzanam sporo pracy, zaoszczędza pamieć komputera i przyśpiesza wykonywanie się programu.</p>
+                <p>Dziedziczenie jest mechanizmem, który pozwala obiektom na dosłowne odziedziczenie zachowań i stanów obiektów położonych wyżej w hierarchii. Można powiedzieć, że obiekt-dziecko dziedziczy/przejmuje cechy po obiekcie-rodzic. To bardzo przydatny mechanizm, gdyż czasami chcąc tworzyć obiekty, które różnią się od siebie jedynie jednym stanem czy metodą a poza tym, są takie same ten mechanizm, oszczędza nam sporo pracy, zaoszczędza pamięć komputera i przyśpiesza wykonywanie się programu.</p>
+                <br/><br/>
 
                 <h5>Niezależność od architektury</h5>
-                <p>Właściwość ta jest osiągana przez Javę dzięki temu że kod źródłowy jest kompilowany do kodu pośredniego. Kod pośredni inaczej kod bajtowy (ang. bytecode) ma tę właściwość że jest niezależny od systemu operacyjnego czy procesora. Jedyne czego system operacyjny potrzebuje aby wykonać program Javy jest Wirtualna Maszyna Javy - JVM (ang. Java Virtual Maschine). JVM w uproszczeniu dostosowuje kod bajtowy do specifiki systemu operacyjnego oraz procesora.</p>
+                <p>Właściwość ta jest osiągana przez Javę dzięki temu, że kod źródłowy jest kompilowany do kodu pośredniego. Kod pośredni inaczej kod bajtowy (ang. bytecode) ma tę właściwość, że jest niezależny od systemu operacyjnego czy procesora. Jedyne czego system operacyjny potrzebuje, aby wykonać program Javy jest Wirtualna Maszyna Javy — JVM (ang. Java Virtual Maschine). JVM w uproszczeniu dostosowuje kod bajtowy do specyfiki systemu operacyjnego oraz procesora.</p>
+                <br/><br/>
 
                 <h5>Niezawodność i bezpieczeństwo</h5>
-                <p>Jeśli chodzi o te kwestie autorzy języka zrobili naprawdę dużo. Co mam na myśli? Pierwszym punktem jest mechanizm wyjatków. System ten jest uruchamiany w momencie gdy aplikacja natrafi na nieprzewidziane trudności takie jak np.</p>
+                <p>Jeśli chodzi o te kwestie, autorzy języka zrobili naprawdę dużo. Co mam na myśli? Pierwszym punktem jest mechanizm wyjątków. System ten jest uruchamiany w momencie, gdy aplikacja natrafi na nieprzewidziane trudności takie jak np.:</p>
                 <uL>
-                    <li>operacja na pustym elemencie</li>
+                    <li>operacje na pustym elemencie</li>
                     <li>operacje poza zadeklarowaną granicą tablicy</li>
                     <li>podanie nieprawidłowych danych użytkownika</li>
                     <li>dzielenie przez zero</li>
@@ -92,11 +109,16 @@
 
                 <p>Innym przykładem niezawodności jest system logowania, który pozwala na zapisywanie w plikach dziennika przebieg działania programu.</p>
 
-                <p>Natomiast z perspektywy bezpieczeństwa istnieje system asercji, który pozwala upewnić się że wymagania co do określonych wyrażeń są prawdziwe.</p>
+                <p>Natomiast z perspektywy bezpieczeństwa istnieje system asercji, który pozwala upewnić się, że wymagania co do określonych wyrażeń są prawdziwe.</p>
+                <br/><br/>
 
                 <h5>Sieciowość</h5>
-                <p>Sieciowość w Javie jest traktowana jako odpowiednio przygotowane klasy. Przez trzymanie się zasad obiktowości Java nie widzi różnicy czy to jest plik lokalny czy dane z sieci. To też ułatwia pracę programistom.</p>
-
+                <p>Sieciowość w Javie jest traktowana jako odpowiednio przygotowane klasy. Przez trzymanie się zasad obiektowości Java nie widzi różnicy pomiędzy plikiem lokalnym a danymi z sieci. To też ułatwia pracę programistom, posiadając bogatą bibliotekę funkcji umożliwiających komunikację poprzez wiele popularnych protokołów sieciowych.</p>
+                <br/><br/>
+                
+                
+                <h5>Podsumowanie</h5>
+                <p>Jeśli chodzi o ogólną podstawową wiedzę na start, to myślę, że założenie zostało osiągnięte. Oczywiście o założeniach języka przez mechanizmy aż po konkretne biblioteki i klasy można pisać bez końca. Ten wpis miał dać solidny ogólny zarys, jak to wygląda i na czym oparta jest koncepcja Javy.</p>
 
             </div>
         </main>
