@@ -19,4 +19,9 @@ public class JBasicsController {
         return "j-basics-t/first-program";
     }
     
+    @GetMapping("/variables")
+    String getVariables(){
+        return "j-basics-t/variables";
+    }
+    
 }
