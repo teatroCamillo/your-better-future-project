@@ -6,6 +6,7 @@
     <title>Twój Pierwszy Program</title>
 
     <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link th:href="@{/css/main.css}" rel="stylesheet">
     <link th:href="@{/css/fontello.css}" rel="stylesheet">
     
@@ -168,11 +169,8 @@
 				<li>nazwy zmiennych powinny być samo opisujące</li>
 			</ul>
 			
-			<div>
+			<p>Paczka zip z projektem do pobrania: <a th:href="@{/zip/j-basics-z/zmienne.zip}" download ><i class="mx-3 bi bi-box" style="font-size: 5rem;"></i></a></p>
 			
-			<i class="bi bi-box"></i>
-			</div>
-			<p>Paczka z projektrm do pobrania <a th:href="@{/zip/j-basics-z/zmienne.zip}" download >zmienne.zip</a></p>
             
         </main>
         <div th:replace="~{fragments/entries :: entries}"></div>
