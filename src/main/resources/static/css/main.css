@@ -6,6 +6,15 @@ html, body{
     color: black !important;
 }
 
+a{
+	text-decoration:  none;
+}
+
+a:hover{
+	color: #ff0436;
+	text-decoration:  none;
+}
+
 /*Header #########################################################################################################*/
 
 nav{

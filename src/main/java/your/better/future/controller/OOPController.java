@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/installation")
-public class InstallationController {
+@RequestMapping("/oop")
+public class OOPController {
 
     @GetMapping
-    String getInstallation(){
-        return "installation";
+    String getOOP(){
+        return "oop";
     }
 }
